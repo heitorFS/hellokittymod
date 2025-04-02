@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"com.heitorfs.hellokitty.HellokittyDataGenerator"
+		],
+		"client": [
+			"com.heitorfs.hellokitty.HellokittyClient"
 		]
 	},
 	"mixins": [
