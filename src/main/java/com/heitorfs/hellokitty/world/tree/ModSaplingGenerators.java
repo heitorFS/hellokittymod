@@ -12,8 +12,8 @@ public class ModSaplingGenerators {
             Optional.of(ModConfiguredFeatures.BLUE_OAK_KEY),
             Optional.empty());
 
-    public static final SaplingGenerator RED_MAPLE = new SaplingGenerator(Hellokitty.MOD_ID + ":blue_oak",
+    public static final SaplingGenerator RED_MAPLE = new SaplingGenerator(Hellokitty.MOD_ID + ":red_maple",
             Optional.empty(),
-            Optional.of(ModConfiguredFeatures.BLUE_OAK_KEY),
+            Optional.of(ModConfiguredFeatures.RED_MAPLE_KEY),
             Optional.empty());
 }
