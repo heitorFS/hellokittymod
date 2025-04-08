@@ -2,6 +2,7 @@ package com.heitorfs.hellokitty.block;
 
 import com.heitorfs.hellokitty.Hellokitty;
 import com.heitorfs.hellokitty.world.tree.ModSaplingGenerators;
+import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -12,6 +13,9 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
+import net.minecraft.world.World;
 
 import java.util.function.Function;
 
@@ -43,7 +47,7 @@ public class ModBlocks {
 
     public static final Block BLUE_OAK_LEAVES = registerBlock(
             "blue_oak_leaves",
-            Block::new,
+            settings -> getLeavesBlock(settings, 0.01f),
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES));
 
     public static final Block BLUE_OAK_SAPLING = registerBlock(
@@ -79,7 +83,7 @@ public class ModBlocks {
 
     public static final Block RED_MAPLE_LEAVES = registerBlock(
             "red_maple_leaves",
-            Block::new,
+            settings -> getLeavesBlock(settings, 0.02f),
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES));
 
     public static final Block RED_MAPLE_SAPLING = registerBlock(
@@ -109,6 +113,20 @@ public class ModBlocks {
         Registry.register(Registries.ITEM, itemKey, blockItem);
 
         return Registry.register(Registries.BLOCK, blockKey, block);
+    }
+
+    private static Block getLeavesBlock(AbstractBlock.Settings settings, float leafParticleChance) {
+        return new LeavesBlock(leafParticleChance, settings) {
+            @Override
+            public MapCodec<? extends LeavesBlock> getCodec() {
+                return null;
+            }
+
+            @Override
+            protected void spawnLeafParticle(World world, BlockPos pos, Random random) {
+
+            }
+        };
     }
 
     //endregion
