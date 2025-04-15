@@ -6,11 +6,15 @@
   "block.hellokitty.blue_oak_planks": "Blue Oak Planks",
   "block.hellokitty.blue_oak_leaves": "Blue Oak Leaves",
   "block.hellokitty.blue_oak_sapling": "Blue Oak Sapling",
+
   "block.hellokitty.red_maple_log": "Red Maple Log",
   "block.hellokitty.red_maple_wood": "Red Maple Wood",
   "block.hellokitty.stripped_red_maple_log": "Stripped Red Maple Log",
   "block.hellokitty.stripped_red_maple_wood": "Stripped Red Maple Wood",
   "block.hellokitty.red_maple_planks": "Red Maple Planks",
   "block.hellokitty.red_maple_leaves": "Red Maple Leaves",
-  "block.hellokitty.red_maple_sapling": "Red Maple Sapling"
+  "block.hellokitty.red_maple_sapling": "Red Maple Sapling",
+
+  "biome.hellokitty.blue_forest": "Blue Forest",
+  "biome.hellokitty.red_taiga": "Red Taiga"
 }
