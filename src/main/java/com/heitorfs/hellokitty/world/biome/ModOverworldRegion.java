@@ -34,6 +34,17 @@ public class ModOverworldRegion extends Region {
                 .weirdness(ParameterUtils.Weirdness.PEAK_NORMAL, ParameterUtils.Weirdness.LOW_SLICE_VARIANT_ASCENDING)
                 .build().forEach((point) -> builder.add(point, ModBiomes.BLUE_FOREST));
 
+
+
+        new ParameterUtils.ParameterPointListBuilder()
+                .temperature(ParameterUtils.Temperature.span(ParameterUtils.Temperature.NEUTRAL, ParameterUtils.Temperature.COOL))
+                .humidity(ParameterUtils.Humidity.span(ParameterUtils.Humidity.NEUTRAL, ParameterUtils.Humidity.HUMID))
+                .continentalness(ParameterUtils.Continentalness.INLAND)
+                .erosion(ParameterUtils.Erosion.EROSION_0, ParameterUtils.Erosion.EROSION_1)
+                .depth(ParameterUtils.Depth.SURFACE, ParameterUtils.Depth.FLOOR)
+                .weirdness(ParameterUtils.Weirdness.PEAK_NORMAL, ParameterUtils.Weirdness.LOW_SLICE_VARIANT_ASCENDING)
+                .build().forEach((point) -> builder.add(point, ModBiomes.RED_TAIGA));
+
         builder.build().forEach(mapper);
 
 //        ADDING METHOD 2
