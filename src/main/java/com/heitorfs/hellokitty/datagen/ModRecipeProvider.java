@@ -22,12 +22,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         return new RecipeGenerator(wrapperLookup, recipeExporter) {
             @Override
             public void generate() {
-                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_OAK_PLANKS)
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_OAK_PLANKS, 4)
                         .input(ModBlocks.BLUE_OAK_LOG)
                         .criterion(hasItem(ModBlocks.BLUE_OAK_LOG), conditionsFromItem(ModBlocks.BLUE_OAK_LOG))
                         .offerTo(recipeExporter);
 
-                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_MAPLE_PLANKS)
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_MAPLE_PLANKS, 4)
                         .input(ModBlocks.RED_MAPLE_LOG)
                         .criterion(hasItem(ModBlocks.RED_MAPLE_LOG), conditionsFromItem(ModBlocks.RED_MAPLE_LOG))
                         .offerTo(recipeExporter);
