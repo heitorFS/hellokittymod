@@ -23,6 +23,9 @@
 		],
 		"client": [
 			"com.heitorfs.hellokitty.HellokittyClient"
+		],
+		"terrablender": [
+			"com.heitorfs.hellokitty.world.biome.ModTerrablenderAPI"
 		]
 	},
 	"mixins": [
