@@ -12,6 +12,7 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> BLUE_OAK_PLACED_KEY = registerKey("blue_oak_placed");
+    public static final RegistryKey<PlacedFeature> RED_MAPLE_KEY = registerKey("red_maple_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -19,6 +20,11 @@ public class ModPlacedFeatures {
         register(context, BLUE_OAK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLUE_OAK_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(8, 0.1f, 2), ModBlocks.BLUE_OAK_SAPLING
+                ));
+
+        register(context, RED_MAPLE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_MAPLE_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(3, 0.1f, 1), ModBlocks.RED_MAPLE_SAPLING
                 ));
     }
 
