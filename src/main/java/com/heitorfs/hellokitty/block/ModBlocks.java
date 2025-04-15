@@ -91,7 +91,7 @@ public class ModBlocks {
             settings -> new SaplingBlock(ModSaplingGenerators.RED_MAPLE, settings),
             AbstractBlock.Settings.copy(Blocks.OAK_SAPLING));
 
-    //region Functions
+    //region Methods
 
     private static RegistryKey<Item> keyOfItem(String name)
     {
@@ -116,9 +116,9 @@ public class ModBlocks {
     }
 
     private static Block getLeavesBlock(AbstractBlock.Settings settings, float leafParticleChance) {
-        return new LeavesBlock(leafParticleChance, settings) {
+        return new TintedParticleLeavesBlock(leafParticleChance, settings) {
             @Override
-            public MapCodec<? extends LeavesBlock> getCodec() {
+            public MapCodec<? extends TintedParticleLeavesBlock> getCodec() {
                 return null;
             }
 
