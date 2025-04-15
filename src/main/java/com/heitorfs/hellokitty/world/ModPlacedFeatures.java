@@ -1,21 +1,25 @@
 package com.heitorfs.hellokitty.world;
 
 import com.heitorfs.hellokitty.Hellokitty;
+import com.heitorfs.hellokitty.block.ModBlocks;
 import net.minecraft.registry.*;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 
 import java.util.List;
 
 public class ModPlacedFeatures {
+    public static final RegistryKey<PlacedFeature> BLUE_OAK_PLACED_KEY = registerKey("blue_oak_placed");
+
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
+        register(context, BLUE_OAK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLUE_OAK_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(8, 0.1f, 2), ModBlocks.BLUE_OAK_SAPLING
+                ));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
