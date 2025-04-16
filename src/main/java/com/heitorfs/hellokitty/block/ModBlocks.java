@@ -223,6 +223,14 @@ public class ModBlocks {
             entries.add(RED_MAPLE_LOG);
             entries.add(STRIPPED_RED_MAPLE_LOG);
             entries.add(RED_MAPLE_PLANKS);
+            entries.add(RED_MAPLE_STAIRS);
+            entries.add(RED_MAPLE_SLAB);
+            entries.add(RED_MAPLE_BUTTON);
+            entries.add(RED_MAPLE_PRESSURE_PLATE);
+            entries.add(RED_MAPLE_FENCE);
+            entries.add(RED_MAPLE_FENCE_GATE);
+            entries.add(RED_MAPLE_DOOR);
+            entries.add(RED_MAPLE_TRAPDOOR);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
