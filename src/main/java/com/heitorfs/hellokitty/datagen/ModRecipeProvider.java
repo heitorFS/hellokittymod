@@ -41,6 +41,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input(ModBlocks.RED_MAPLE_LOG)
                         .criterion(hasItem(ModBlocks.RED_MAPLE_LOG), conditionsFromItem(ModBlocks.RED_MAPLE_LOG))
                         .offerTo(recipeExporter);
+
+                createDoorRecipe(ModBlocks.RED_MAPLE_DOOR, Ingredient.ofItem(ModBlocks.RED_MAPLE_PLANKS))
+                        .criterion(hasItem(ModBlocks.RED_MAPLE_PLANKS), conditionsFromItem(ModBlocks.RED_MAPLE_PLANKS))
+                        .offerTo(recipeExporter);
+
+                createTrapdoorRecipe(ModBlocks.RED_MAPLE_TRAPDOOR, Ingredient.ofItem(ModBlocks.RED_MAPLE_PLANKS))
+                        .criterion(hasItem(ModBlocks.RED_MAPLE_PLANKS), conditionsFromItem(ModBlocks.RED_MAPLE_PLANKS))
+                        .offerTo(recipeExporter);
             }
         };
     }

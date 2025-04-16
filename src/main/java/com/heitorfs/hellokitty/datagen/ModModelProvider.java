@@ -32,9 +32,19 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerAxisRotated(ModBlocks.RED_MAPLE_LOG, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.STRIPPED_RED_MAPLE_LOG, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RED_MAPLE_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool redMaplePlanksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RED_MAPLE_PLANKS);
         blockStateModelGenerator.registerSingleton(ModBlocks.RED_MAPLE_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerTintableCross(ModBlocks.RED_MAPLE_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
+
+        redMaplePlanksTexturePool.stairs(ModBlocks.RED_MAPLE_STAIRS);
+        redMaplePlanksTexturePool.slab(ModBlocks.RED_MAPLE_SLAB);
+        redMaplePlanksTexturePool.button(ModBlocks.RED_MAPLE_BUTTON);
+        redMaplePlanksTexturePool.pressurePlate(ModBlocks.RED_MAPLE_PRESSURE_PLATE);
+        redMaplePlanksTexturePool.fence(ModBlocks.RED_MAPLE_FENCE);
+        redMaplePlanksTexturePool.fenceGate(ModBlocks.RED_MAPLE_FENCE_GATE);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.RED_MAPLE_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.RED_MAPLE_TRAPDOOR);
     }
 
     @Override
