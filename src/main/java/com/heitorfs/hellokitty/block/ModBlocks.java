@@ -93,6 +93,7 @@ public class ModBlocks {
     //endregion
 
     //region Red Maple Blocks
+
     public static final Block RED_MAPLE_LOG = registerBlock(
             "red_maple_log",
             PillarBlock::new,
@@ -127,6 +128,38 @@ public class ModBlocks {
             "red_maple_sapling",
             settings -> new SaplingBlock(ModSaplingGenerators.RED_MAPLE, settings),
             AbstractBlock.Settings.copy(Blocks.OAK_SAPLING));
+
+    public static final Block RED_MAPLE_STAIRS = registerBlock("red_maple_stairs",
+            settings -> new StairsBlock(RED_MAPLE_PLANKS.getDefaultState(), settings),
+            AbstractBlock.Settings.copy(Blocks.OAK_STAIRS));
+
+    public static final Block RED_MAPLE_SLAB = registerBlock("red_maple_slab",
+            SlabBlock::new,
+            AbstractBlock.Settings.copy(Blocks.OAK_SLAB));
+
+    public static final Block RED_MAPLE_BUTTON = registerBlock("red_maple_button",
+            settings -> new ButtonBlock(BlockSetType.OAK, 10, settings),
+            AbstractBlock.Settings.copy(Blocks.OAK_BUTTON));
+
+    public static final Block RED_MAPLE_PRESSURE_PLATE = registerBlock("red_maple_pressure_plate",
+            settings -> new PressurePlateBlock(BlockSetType.OAK, settings),
+            AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE));
+
+    public static final Block RED_MAPLE_FENCE = registerBlock("red_maple_fence",
+            FenceBlock::new,
+            AbstractBlock.Settings.copy(Blocks.OAK_FENCE));
+
+    public static final Block RED_MAPLE_FENCE_GATE = registerBlock("red_maple_fence_gate",
+            settings -> new FenceGateBlock(WoodType.OAK, settings),
+            AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE));
+
+    public static final Block RED_MAPLE_DOOR = registerBlock("red_maple_door",
+            settings -> new DoorBlock(BlockSetType.OAK, settings),
+            AbstractBlock.Settings.copy(Blocks.OAK_DOOR));
+
+    public static final Block RED_MAPLE_TRAPDOOR = registerBlock("red_maple_trapdoor",
+            settings -> new TrapdoorBlock(BlockSetType.OAK, settings),
+            AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR));
 
     //endregion
 
