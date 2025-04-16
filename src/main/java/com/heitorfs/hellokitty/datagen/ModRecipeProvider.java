@@ -7,6 +7,7 @@ import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.data.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 
@@ -26,6 +27,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input(ModBlocks.BLUE_OAK_LOG)
                         .criterion(hasItem(ModBlocks.BLUE_OAK_LOG), conditionsFromItem(ModBlocks.BLUE_OAK_LOG))
                         .offerTo(recipeExporter);
+
+                createDoorRecipe(ModBlocks.BLUE_OAK_DOOR, Ingredient.ofItem(ModBlocks.BLUE_OAK_PLANKS))
+                        .criterion(hasItem(ModBlocks.BLUE_OAK_PLANKS), conditionsFromItem(ModBlocks.BLUE_OAK_PLANKS))
+                        .offerTo(recipeExporter);
+
+                createTrapdoorRecipe(ModBlocks.BLUE_OAK_TRAPDOOR, Ingredient.ofItem(ModBlocks.BLUE_OAK_PLANKS))
+                        .criterion(hasItem(ModBlocks.BLUE_OAK_PLANKS), conditionsFromItem(ModBlocks.BLUE_OAK_PLANKS))
+                        .offerTo(recipeExporter);
+
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_MAPLE_PLANKS, 4)
                         .input(ModBlocks.RED_MAPLE_LOG)

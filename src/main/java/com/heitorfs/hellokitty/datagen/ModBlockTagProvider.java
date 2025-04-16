@@ -45,5 +45,29 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.LEAVES)
                 .add(ModBlocks.BLUE_OAK_LEAVES)
                 .add(ModBlocks.RED_MAPLE_LEAVES);
+
+        getOrCreateTagBuilder(BlockTags.STAIRS)
+                .add(ModBlocks.BLUE_OAK_STAIRS)
+
+        getOrCreateTagBuilder(BlockTags.SLABS)
+                .add(ModBlocks.BLUE_OAK_SLAB)
+
+        getOrCreateTagBuilder(BlockTags.BUTTONS)
+                .add(ModBlocks.BLUE_OAK_BUTTON)
+
+        getOrCreateTagBuilder(BlockTags.PRESSURE_PLATES)
+                .add(ModBlocks.BLUE_OAK_PRESSURE_PLATE)
+
+        getOrCreateTagBuilder(BlockTags.FENCES)
+                .add(ModBlocks.BLUE_OAK_FENCE)
+
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(ModBlocks.BLUE_OAK_FENCE_GATE)
+
+        getOrCreateTagBuilder(BlockTags.DOORS)
+                .add(ModBlocks.BLUE_OAK_DOOR)
+
+        getOrCreateTagBuilder(BlockTags.TRAPDOORS)
+                .add(ModBlocks.BLUE_OAK_TRAPDOOR)
     }
 }

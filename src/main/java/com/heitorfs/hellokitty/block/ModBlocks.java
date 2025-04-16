@@ -211,6 +211,15 @@ public class ModBlocks {
             entries.add(BLUE_OAK_LOG);
             entries.add(STRIPPED_BLUE_OAK_LOG);
             entries.add(BLUE_OAK_PLANKS);
+            entries.add(BLUE_OAK_STAIRS);
+            entries.add(BLUE_OAK_SLAB);
+            entries.add(BLUE_OAK_BUTTON);
+            entries.add(BLUE_OAK_PRESSURE_PLATE);
+            entries.add(BLUE_OAK_FENCE);
+            entries.add(BLUE_OAK_FENCE_GATE);
+            entries.add(BLUE_OAK_DOOR);
+            entries.add(BLUE_OAK_TRAPDOOR);
+
             entries.add(RED_MAPLE_LOG);
             entries.add(STRIPPED_RED_MAPLE_LOG);
             entries.add(RED_MAPLE_PLANKS);
@@ -220,6 +229,7 @@ public class ModBlocks {
             entries.add(BLUE_OAK_LEAVES);
             entries.add(BLUE_OAK_SAPLING);
             entries.add(BLUE_OAK_LOG);
+
             entries.add(RED_MAPLE_LEAVES);
             entries.add(RED_MAPLE_SAPLING);
             entries.add(RED_MAPLE_LOG);

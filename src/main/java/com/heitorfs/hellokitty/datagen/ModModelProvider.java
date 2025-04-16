@@ -16,9 +16,19 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerAxisRotated(ModBlocks.BLUE_OAK_LOG, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.STRIPPED_BLUE_OAK_LOG, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLUE_OAK_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool blueOakPlanksTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLUE_OAK_PLANKS);
         blockStateModelGenerator.registerSingleton(ModBlocks.BLUE_OAK_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerTintableCross(ModBlocks.BLUE_OAK_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
+
+        blueOakPlanksTexturePool.stairs(ModBlocks.BLUE_OAK_STAIRS);
+        blueOakPlanksTexturePool.slab(ModBlocks.BLUE_OAK_SLAB);
+        blueOakPlanksTexturePool.button(ModBlocks.BLUE_OAK_BUTTON);
+        blueOakPlanksTexturePool.pressurePlate(ModBlocks.BLUE_OAK_PRESSURE_PLATE);
+        blueOakPlanksTexturePool.fence(ModBlocks.BLUE_OAK_FENCE);
+        blueOakPlanksTexturePool.fenceGate(ModBlocks.BLUE_OAK_FENCE_GATE);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.BLUE_OAK_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.BLUE_OAK_TRAPDOOR);
 
         blockStateModelGenerator.registerAxisRotated(ModBlocks.RED_MAPLE_LOG, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.STRIPPED_RED_MAPLE_LOG, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
