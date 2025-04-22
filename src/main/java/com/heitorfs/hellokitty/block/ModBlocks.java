@@ -5,6 +5,8 @@ import com.heitorfs.hellokitty.world.tree.ModSaplingGenerators;
 import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
+import net.minecraft.block.enums.NoteBlockInstrument;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -84,7 +86,11 @@ public class ModBlocks {
 
     public static final Block BLUE_OAK_DOOR = registerBlock("blue_oak_door",
             settings -> new DoorBlock(BlockSetType.OAK, settings),
-            AbstractBlock.Settings.copy(Blocks.OAK_DOOR));
+            AbstractBlock.Settings.copy(Blocks.OAK_DOOR)
+                    .strength(3.0F)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .instrument(NoteBlockInstrument.BASS));
 
     public static final Block BLUE_OAK_TRAPDOOR = registerBlock("blue_oak_trapdoor",
             settings -> new TrapdoorBlock(BlockSetType.OAK, settings),
@@ -155,7 +161,12 @@ public class ModBlocks {
 
     public static final Block RED_MAPLE_DOOR = registerBlock("red_maple_door",
             settings -> new DoorBlock(BlockSetType.OAK, settings),
-            AbstractBlock.Settings.copy(Blocks.OAK_DOOR));
+            AbstractBlock.Settings.copy(Blocks.OAK_DOOR)
+                    .strength(3.0F)
+                    .nonOpaque()
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .instrument(NoteBlockInstrument.BASS));
 
     public static final Block RED_MAPLE_TRAPDOOR = registerBlock("red_maple_trapdoor",
             settings -> new TrapdoorBlock(BlockSetType.OAK, settings),
